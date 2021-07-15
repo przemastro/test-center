@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "73197860521",
+    "firebase_url": "https://tranquil-rite-245214.firebaseio.com",
+    "project_id": "tranquil-rite-245214",
+    "storage_bucket": "tranquil-rite-245214.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73197860521:android:aadedfbbe4e622e134dbb8",
+        "android_client_info": {
+          "package_name": "com.oikotietestcenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73197860521-sf0p8f9mh8o8cdhoirvlpj8kmln5mkj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhPMaP75TOl4RrcpusyQmiLtA7v_MPeFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73197860521-sf0p8f9mh8o8cdhoirvlpj8kmln5mkj4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
