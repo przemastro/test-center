@@ -97,8 +97,8 @@ object Configuration {
         when (setupDevice.newAppInstallation) {
             "True" -> caps.setCapability("app", appPath)
             "False" -> {
-                caps.setCapability("appPackage", "fi.oikotie");
-                caps.setCapability("appActivity", "fi.oikotie.app.splash.SplashActivity")
+                caps.setCapability("appPackage", "app.Package");
+                caps.setCapability("appActivity", "app.Activity")
             }
         }
         println("setup driver")
@@ -124,8 +124,8 @@ object Configuration {
         when (System.getProperty("newAppInstallation")) {
             "True" -> caps.setCapability("app", appPath)
             "False" -> {
-                caps.setCapability("appPackage", "fi.oikotie");
-                caps.setCapability("appActivity", "fi.oikotie.app.splash.SplashActivity")
+                caps.setCapability("appPackage", "app.Package");
+                caps.setCapability("appActivity", "app.Activity")
             }
         }
         println("setup driver")

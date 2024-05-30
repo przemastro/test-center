@@ -186,15 +186,14 @@ open class ApiRest {
         requestParams["type"] = "ot-apts"
         println(requestParams)
         val request: RequestSpecification = RestAssured.given()
-                .header("username", "oikotietest1@gmail.com")
+                .header("username", "example@gmail.com")
                 .header("password", "test1234")
                 .header("Content-Type", "application/json")
                 .header("Accept","application/json" )
                 .body(requestParams)
-        lastResponse = request.post("https://sso.oikotie.fi/client/v2/login")
+        lastResponse = request.post("https://example/client/v2/login")
         println(lastResponse?.then()?.statusCode(200))
 
-        //println(lastResponse?.then()?.extract()?.path<String>("status"))
     }
 
 

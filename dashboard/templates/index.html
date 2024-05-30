@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>Oikotie Test Center</title>
+    <title>Test Center</title>
     <link rel="icon" href="{{ url_for('static', filename='css/favicon.ico') }}" type="image/icon type">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/oikotie.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/logo.css') }}">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -16,16 +16,16 @@
     <div class="layout">
         <div class="header">
                 <ul class="header-menu">
-                    <li class="OikotieNavigation" style="display: block;">
-                        <a id="oikotie" href="https://oikotie.fi">
-                            <img src="{{ url_for('static', filename='css/oikotie-logo.png') }}" >
+                    <li class="Navigation" style="display: block;">
+                        <a id="app" href="app">
+                            <img src="{{ url_for('static', filename='css/logo.png') }}" >
                         </a>
                     </li>
                     <li class="header-link"><a href="http://10.169.101.169:9090/" target="_blank">Jenkins</a></li>
                     <li class="header-link"><a href="http://10.169.101.169:7100/#!/devices" target="_blank">STF</a></li>
                     <li class="header-link"><a data-toggle="modal" data-target="#exampleModal">Bugs</a></li>
-                    <li class="header-link"><a href="https://bitbucket.org/espeoeu/oikoite-automated-tests/src/develop/" target="_blank">Repository</a></li>
-                    <li class="header-link"><a href="https://confluence.sanoma.com/pages/viewpage.action?pageId=152151022" target="_blank">Documentation</a></li>
+                    <li class="header-link"><a href="https://repository" target="_blank">Repository</a></li>
+                    <li class="header-link"><a href="https://confluence" target="_blank">Documentation</a></li>
                 </ul>
         </div>
 
@@ -58,7 +58,7 @@
                             <div class="section-title">
                             <p>Mobile API Automated Tests</p>
                             </div>
-                            <iframe id="frame" class="iframe" src="http://10.169.101.169:9090/job/oikotie-mobile-api-prod/allure/"
+                            <iframe id="frame" class="iframe" src="http://10.169.101.169:9090/job/mobile-api-prod/allure/"
                                     width="600" height="250"
                                     frameBorder="0"
                                     scrolling="no"
@@ -68,7 +68,7 @@
                             <div class="section-title">
                             <p>Web API Automated Tests</p>
                             </div>
-                            <iframe class="iframe" src="http://10.169.101.169:9090/job/oikotie-web-api-prod/allure/"
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/web-api-prod/allure/"
                                     width="600" height="250"
                                     frameBorder="0"
                                     scrolling="no"
@@ -78,7 +78,7 @@
                             <div class="section-title">
                             <p>Android Automated Tests</p>
                             </div>
-                            <iframe class="iframe" src="http://10.169.101.169:9090/job/oikotie-android-prod/allure/"
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/android-prod/allure/"
                                     width="600" height="250"
                                     frameBorder="0"
                                     scrolling="no"
@@ -88,7 +88,7 @@
                             <div class="section-title">
                             <p>iOS Automated Tests</p>
                             </div>
-                            <iframe class="iframe" src="http://10.169.101.169:9090/job/oikotie-iOS-prod/allure"
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/iOS-prod/allure"
                                     width="600" height="250"
                                     frameBorder="0"
                                     scrolling="no"
@@ -98,7 +98,7 @@
                             <div class="section-title">
                             <p>Web Automated Tests</p>
                             </div>
-                            <iframe class="iframe" src="http://10.169.101.169:9090/job/oikotie-web-prod/allure/"
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/web-prod/allure/"
                                     width="600" height="250"
                                     frameBorder="0"
                                     scrolling="no"

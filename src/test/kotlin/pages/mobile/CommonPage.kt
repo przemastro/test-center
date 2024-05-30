@@ -44,23 +44,7 @@ open class CommonPage : CommonPageElements() {
 
     open fun buttons(button: String?): WebElement? {
         val buttons = HashMap<String, WebElement?>()
-        buttons["ASUNNOT"] = asunnotButton
-        buttons["Haku"] = hakuButton
-        buttons["Sinulle"] = sinulleButton
-        buttons["Tapahtumat"] = tapahtumatButton
-        buttons["Profiili"] = profiiliButton
-        buttons["TYÖPAIKAT"] = tyopaikatButton
-        buttons["EI"] = eiButton
-        buttons["KYLLÄ"] = kyllaButton
-        buttons["Ei Kiitos"] = eiKiitosButton
-        buttons["Tallenna"] = tallennaButton
-        buttons["Kohteen tiedot"] = kohteenTiedotButton
-        buttons["LAHETA VIESTI"] = lahetaViestiButton
-        buttons["PERUUTA"] = peruutaButton
-        buttons["KIRJAUDO ULOS"] = kirjaudoUlosButton
-        buttons["Kirjaudu Facebook-tunnuksilla"] = kirjauduFacebookTunnuksillaButton
-        buttons["Kirjaudu tai luo tunnus"] = kirjauduTaiLuoTunnus
-        //buttons["Tallennetut"] = tallennetutButton
+        buttons["Button"] = button
         return buttons.get(button)
     }
 

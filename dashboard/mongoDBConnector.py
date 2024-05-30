@@ -5,7 +5,7 @@ from datetime import date, timedelta
 def connectDB():
     try:
         myclient = MongoClient('localhost',27017)
-        mydb = myclient["Oikotie"]
+        mydb = myclient["App"]
         myclient.close()
         return mydb
     except:

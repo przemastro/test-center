@@ -2,10 +2,10 @@ package elements.mobile
 
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
+import pages.mobile.CommonPage
 
-open class CommonPageElements {
+open class ExamplePageElements : CommonPage() {
 
     @FindBy(id = "some_id")
-    var someIcon: WebElement? = null
-
+    var someElement: WebElement? = null
 }

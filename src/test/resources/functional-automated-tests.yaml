@@ -5,21 +5,21 @@ newAppInstallation: False
 
 localDeviceName: GSM9X18709C04883 #ZL62223D6N #GSM9X18709C04883
 localPlatformVersion: 8.0.0
-localAppPath: /src/main/kotlin/app/oikotie.apk
+localAppPath: /src/main/kotlin/app/example.apk
 localAppiumURL: http://localhost:4723/wd/hub #http://10.169.103.30:4723/wd/hub
 
 browserStackDeviceName: Samsung Galaxy S9
 browserStackPlatformVersion: 8.0
-browserStackAppPath: bs://53920b322fa5bb7e5df9999f197ae540b067919e
-browserStackAppiumURL: https://przemysawjagodzi1:hsgQvhstudvsY99B4fgk@hub-cloud.browserstack.com/wd/hub
+browserStackAppPath:
+browserStackAppiumURL: https://example.access.com
 
 platformName: Android
 runName: Kotlin Example Run
 
 
 #API
-apiUrl: https://oikotie.fi
+apiUrl: https://example.com
 
 #
 web: False
-webUrl: https://oikotie.fi
+webUrl: https://example.com

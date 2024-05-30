@@ -10,7 +10,7 @@ object MongoConnector {
     fun connectDB (): MongoDatabase {
         var mongoClient: MongoClient? = null
         mongoClient = MongoClient("127.0.0.1", 27017)
-        val db = mongoClient.getDatabase("Oikotie")
+        val db = mongoClient.getDatabase("App")
         return db
     }
 
