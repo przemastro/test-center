@@ -1,0 +1,335 @@
+<html>
+<head>
+    <title>Test Center</title>
+    <link rel="icon" href="{{ url_for('static', filename='css/favicon.ico') }}" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/logo.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body onload="load()">
+<div id="content">
+
+    <div class="layout">
+        <div class="header">
+                <ul class="header-menu">
+                    <li class="Navigation" style="display: block;">
+                        <a id="app" href="app">
+                            <img src="{{ url_for('static', filename='css/logo.png') }}" >
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="http://10.169.101.169:9090/" target="_blank">Jenkins</a></li>
+                    <li class="header-link"><a href="http://10.169.101.169:7100/#!/devices" target="_blank">STF</a></li>
+                    <li class="header-link"><a data-toggle="modal" data-target="#exampleModal">Bugs</a></li>
+                    <li class="header-link"><a href="https://repository" target="_blank">Repository</a></li>
+                    <li class="header-link"><a href="https://confluence" target="_blank">Documentation</a></li>
+                </ul>
+        </div>
+
+        <div class="pageContent" style="position: relative;">
+
+            <div class="div-table">
+
+                <div class="div-table-row">
+                    <div>
+                        <div style="padding-bottom:15px">
+                          <button class="button button2" onclick="spinner()">Reload</button>
+                          <svg class="house" x="50px" y="0px" width="50px" height="45px" viewBox="0 0 148.9 140.8">
+                              <polygon points="65.7,0 0,64.4 34.9,69.8 30.9,140.8 67.1,138.2 67.1,96.6 87.2,95.2 91.2,140.8 127.4,132.8
+	                                           120.7,75.1 148.9,69.8 116.7,40.2 122.1,4 99.3,1.3 99.3,22.8 "/>
+                          </svg>
+                          <script>
+                             function reload() {
+                             document.getElementsByClassName("loader")[0].style.display = "block";
+                             $.get("http://localhost:5000/restart");
+                             location.reload();
+                             }
+                          </script>
+                        </div>
+                        <div class="loader">
+                            <div class="loading">
+                            </div>
+                        </div>
+                    </div>
+                        <div class="div-table-col">
+                            <div class="section-title">
+                            <p>Mobile API Automated Tests</p>
+                            </div>
+                            <iframe id="frame" class="iframe" src="http://10.169.101.169:9090/job/mobile-api-prod/allure/"
+                                    width="600" height="250"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    seamless="seamless"></iframe>
+                        </div>
+                        <div class="div-table-col">
+                            <div class="section-title">
+                            <p>Web API Automated Tests</p>
+                            </div>
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/web-api-prod/allure/"
+                                    width="600" height="250"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    seamless="seamless"></iframe>
+                        </div>
+                        <div class="div-table-col">
+                            <div class="section-title">
+                            <p>Android Automated Tests</p>
+                            </div>
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/android-prod/allure/"
+                                    width="600" height="250"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    seamless="seamless"></iframe>
+                        </div>
+                        <div class="div-table-col">
+                            <div class="section-title">
+                            <p>iOS Automated Tests</p>
+                            </div>
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/iOS-prod/allure"
+                                    width="600" height="250"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    seamless="seamless"></iframe>
+                        </div>
+                        <div class="div-table-col">
+                            <div class="section-title">
+                            <p>Web Automated Tests</p>
+                            </div>
+                            <iframe class="iframe" src="http://10.169.101.169:9090/job/web-prod/allure/"
+                                    width="600" height="250"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    seamless="seamless"></iframe>
+                        </div>
+                </div>
+                <div class="div-table-row" style="margin-top:-10px">
+                    <div class="div-table-col2">
+                        <div class="section-title">
+                        <p>Number of Mobile API bugs</p>
+                        </div>
+                        <div class="outside-count">
+                            <div class="count">{{count[0]}}</div>
+                        </div>
+                        <div class="section-title">
+                        <p>Mobile API bugs by severity</p>
+                        </div>
+                        <div class="outside-count">
+                            <iframe class="iframe2" src="{{ url_for('static', filename='./mobileApiBugs.html') }}"
+                                width="412" height="235"
+                                frameBorder="0"
+                                scrolling="no"
+                                seamless="seamless"></iframe>
+                        </div>
+                    </div>
+                    <div class="div-table-col2">
+                        <div class="section-title">
+                        <p>Number of Web API bugs</p>
+                        </div>
+                        <div class="outside-count">
+                            <div class="count">{{count[1]}}</div>
+                        </div>
+                        <div class="section-title">
+                        <p>Web API bugs by severity</p>
+                        </div>
+                        <div class="outside-count">
+                            <iframe class="iframe2" src="{{ url_for('static', filename='./webApiBugs.html') }}"
+                                width="412" height="235"
+                                frameBorder="0"
+                                scrolling="no"
+                                seamless="seamless"></iframe>
+                        </div>
+                    </div>
+                    <div class="div-table-col2">
+                        <div class="section-title">
+                        <p>Number of Android bugs</p>
+                        </div>
+                        <div class="outside-count">
+                            <div class="count">{{count[2]}}</div>
+                        </div>
+                        <div class="section-title">
+                        <p>Android bugs by severity</p>
+                        </div>
+                        <iframe class="iframe2" src="{{ url_for('static', filename='./androidBugs.html') }}"
+                                width="412" height="235"
+                                frameBorder="0"
+                                scrolling="no"
+                                seamless="seamless"></iframe>
+                    </div>
+                    <div class="div-table-col2">
+                        <div class="section-title">
+                        <p>Number of iOS bugs</p>
+                        </div>
+                        <div class="outside-count">
+                            <div class="count">{{count[3]}}</div>
+                        </div>
+                        <div class="section-title">
+                        <p>iOS bugs by severity</p>
+                        </div>
+                        <iframe class="iframe2" src="{{ url_for('static', filename='./iOSBugs.html') }}"
+                                width="412" height="235"
+                                frameBorder="0"
+                                scrolling="no"
+                                seamless="seamless"></iframe>
+                    </div>
+                    <div class="div-table-col2">
+                        <div class="section-title">
+                        <p>Number of Web bugs</p>
+                        </div>
+                        <div class="outside-count">
+                            <div class="count">{{count[4]}}</div>
+                        </div>
+                        <div class="section-title">
+                        <p>Web bugs by severity</p>
+                        </div>
+                        <iframe class="iframe2" src="{{ url_for('static', filename='./webBugs.html') }}"
+                                width="412" height="235"
+                                frameBorder="0"
+                                scrolling="no"
+                                seamless="seamless"></iframe>
+                    </div>
+                </div>
+                <div class="div-table-row">
+                    <div class="section-title2">
+                    <p style="padding-top:15px">API Performance Monitoring</p>
+                    </div>
+                    <div style="border: 1px solid #e5e5e5;">
+                    {% include 'performance.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="text-align:center;font-size:25px;" id="exampleModalLabel">Bugs Manager</h5>
+                <div class="loader">
+                    <div class="loading">
+                    </div>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="div-table-modal">
+                    <div class="div-table-row-modal" style="width:100%">
+                        <div class="section-title-modal" style="width:99% !important">
+                            <p>Add New Bug</p>
+                        </div>
+                        <div class="form-group">
+                            <form name="passdata" method="POST" action="/addbug" style="margin-bottom: 25px;">
+                                <div class="col-sm-3">
+                                    <label for="severity" class="col-form-label">Severity</label>
+                                    <input type="text" name="severity" class="form-control" id="severity">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="number" class="col-form-label">Jira Number</label>
+                                    <input type="text" name="number" class="form-control" id="number">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="area" class="col-form-label">Area</label>
+                                    <div>
+                                        <select name="area" id="area" required>
+                                            <option value="mobileApiBugs">Mobile API Bug</option>
+                                            <option value="webApiBugs">Web API Bug</option>
+                                            <option value="androidBugs">Android Bug</option>
+                                            <option value="iOSBugs">iOS Bug</option>
+                                            <option value="webBugs">Web Bug</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div style="text-align:center;margin-top: 5px;">
+                                    <button style="margin-top: 25px;" type="submit" onclick="spinner()" class="btn btn-success customSize">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="div-table-row-modal" style="width:100%">
+                            <div class="section-title-modal" style="width:99% !important">
+                                <p>Remove Existing Bug</p>
+                            </div>
+                            <form name="passdata" method="POST" action="/removebug">
+                                <div class="col-sm-3">
+                                    <label for="number2" class="col-form-label">Jira Number</label>
+                                    <input type="text" name="number" class="form-control" id="number2">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="area2" class="col-form-label">Area</label>
+                                    <div>
+                                        <select name="area" id="area2" required>
+                                            <option value="mobileApiBugs">Mobile API Bug</option>
+                                            <option value="webApiBugs">Web API Bug</option>
+                                            <option value="androidBugs">Android Bug</option>
+                                            <option value="iOSBugs">iOS Bug</option>
+                                            <option value="webBugs">Web Bug</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div style="text-align:center;margin-top: 5px;">
+                                    <button style="margin-top: 25px;margin-left: 262px;" type="submit" onclick="spinner()" class="btn btn-danger customSize">Remove</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="div-table-row-modal" style="width:100%">
+                        <div class="div-table-col-modal">
+                            <div class="section-title-modal">
+                                <p>Mobile API Bugs</p>
+                                <div class="bugsData">{{mobileApiBugs}}</div>
+                            </div>
+                        </div>
+                        <div class="div-table-col-modal">
+                            <div class="section-title-modal">
+                                <p>Web API Bugs</p>
+                                <div class="bugsData">{{webApiBugs}}</div>
+                            </div>
+                        </div>
+                        <div class="div-table-col-modal">
+                            <div class="section-title-modal">
+                                <p>Android Bugs</p>
+                                <div class="bugsData">{{androidBugs}}</div>
+                            </div>
+                        </div>
+                        <div class="div-table-col-modal">
+                            <div class="section-title-modal">
+                                <p>iOS Bugs</p>
+                                <div class="bugsData">{{iOSBugs}}</div>
+                            </div>
+                        </div>
+                        <div class="div-table-col-modal">
+                            <div class="section-title-modal">
+                                <p>Web Bugs</p>
+                                <div class="bugsData">{{webBugs}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary customSize" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function spinner() {
+        document.getElementsByClassName("loader")[0].style.display = "block";
+        $.get("http://localhost:5000/restart");
+        location.reload();
+        $('#exampleModal').modal('hide');
+    }
+</script>
+<script type="text/javascript">
+function load()
+{
+setTimeout("window.open(self.location, '_self');", 500000);
+}
+</script>
+</body>
+</html>

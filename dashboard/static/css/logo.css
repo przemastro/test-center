@@ -1,0 +1,348 @@
+.layout {
+  box-sizing: border-box;
+  font-size: .9rem;
+  font-family: OpenSans,sans-serif;
+  background: #f0f1f1
+}
+
+.Navigation {
+  margin-left:55px;
+}
+
+.header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: top .3s;
+  font-family: Roboto,Helvetica,Arial,sans-serif;display: block; box-sizing: border-box;
+  background: #202020;
+  padding: .875rem 0;
+  margin-top:-10px;
+}
+
+.header-menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  font-size: .9rem;
+}
+
+.header-link {
+  display: block;
+  font-weight: 750;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: .125rem solid transparent;
+  transition: color .3s;
+  margin-left: 6px;
+  margin-top: 5px;
+  font-size: 1rem;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
+.div-table {
+   display: table;
+   background-color: #fff;
+   border: 0px solid #666666;
+   border-spacing: 5px; /* cellspacing:poor IE support for  this */
+   margin: auto;
+   width: 100%;
+   margin-top: 80px;
+ }
+
+ .div-table-row {
+   width: 1500px;
+   clear: both;
+   position: relative;
+   margin: auto;
+ }
+ .div-table-col {
+   float: left; /* fix for  buggy browsers */
+   display: table-column;
+   width: 300px;
+   background-color: #fff;
+   overflow:hidden;
+   height: 260;
+   margin-top:50px;
+ }
+
+.div-table-modal {
+   display: table;
+   background-color: #fff;
+   border: 0px solid #666666;
+   border-spacing: 5px; /* cellspacing:poor IE support for  this */
+   margin: auto;
+   width: 100%;
+   margin-top: 80px;
+ }
+
+ .div-table-row-modal {
+   width: 800px;
+   clear: both;
+   position: relative;
+   margin: auto;
+ }
+ .div-table-col-modal {
+   float: left; /* fix for  buggy browsers */
+   display: table-column;
+   width: 150px;
+   background-color: #fff;
+   overflow:hidden;
+   height: 260;
+   margin-top:50px;
+ }
+
+.div-table-col2 {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;
+  width: 300px;
+  background-color: #fff;
+  overflow:hidden;
+  height: 400;
+}
+
+img {
+  width: 122px;
+  height: 32px;
+  margin-left: 60px;
+}
+
+.iframe {
+  overflow: hidden;
+  margin-left: -135px;
+  pointer-events: none;
+  zoom: 0.75; -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+}
+
+.iframe2 {
+  overflow: hidden;
+  pointer-events: none;
+  zoom: 0.69; -moz-transform: scale(0.69);
+  -moz-transform-origin: 0 0;
+  border: 1px solid #e5e5e5;
+  margin: 7px;
+}
+
+a {
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  display: block;
+  font-weight: 500;
+  color: #fff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: .125rem solid transparent;
+  transition: color .3s;
+  font-size: 1.5rem !important;
+  margin-left: 18px;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+a:hover {
+ cursor:pointer;
+}
+
+p {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  border-top: 4px solid #51b325;
+  border-radius: 4px;
+  padding-top:10px;
+}
+
+.count {
+   font-size: 45px;
+   border: 1px solid #e5e5e5;
+   text-align: center;
+   margin: 7px;
+   padding: 20px;
+ }
+
+.outside-count {
+  margin-bottom:50px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  z-index: 10;
+  position: fixed;
+}
+
+button {
+  color: #51b325
+}
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 10px 50px 0 rgba(0,0,0,0.19);
+}
+
+.slider-label-group {
+  opacity: 0;
+}
+
+.slider-labels {
+  opacity: 0;
+}
+
+.slider-tick-rect {
+  opacity: 0;
+}
+
+.section-title {
+  width:95%;
+  margin-left:6px;
+}
+
+.section-title-modal {
+  width:95%;
+  margin-left:6px;
+}
+
+.section-title2 {
+  width:100%;
+  padding-top: 20px;
+}
+
+label {
+  font-size: 15px;
+}
+
+.customSize {
+    width: 80px !important;
+    border-radius:0 !important;
+}
+
+.bugsData {
+  font-size: 14px;
+  border: 0px solid #e5e5e5;
+  margin: 7px;
+  padding: 5px;
+  float: left;
+  width: 170px;
+}
+
+.modal-dialog {
+  width: 900px !important;
+}
+
+.modal-header .close {
+    margin-top: -40px !important;
+}
+
+.modal-body {
+  margin-top: -50px;
+}
+
+.modal-content {
+  border-radius: 0 !important;
+  width: 1100px !important;
+  margin: 30px auto !important;
+      margin-left: auto !important;
+  margin-left: -80px !important;
+}
+
+select {
+    height: 34px !important;
+    border-radius: 4px !important;
+    width: 160px !important;
+    border: 1px solid #6666665e !important;
+    margin-top: -1px !important;
+}
+
+.div-table-col-modal {
+    overflow-y: auto !important;
+    width: 211px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  display: none;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: grey;
+  opacity: 0.6;
+  width:3050px;
+  height:2800px;
+  z-index:1;
+}
+
+.loading {
+  border: 6px solid #ccc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-top-color: black;
+  border-left-color: black;
+  animation: spin 1s infinite ease-in;
+  margin:50%;
+  margin-top:65%
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  overflow-x: hidden;
+}
+
+.house {
+  margin-left: 1450px !important;
+}
+
+svg polygon {
+  fill: none;
+  stroke: #09d;
+  stroke-width: 3;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 570s linear forwards;
+  animation: dash 570s linear forwards;
+}
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
